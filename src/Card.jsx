@@ -1,3 +1,5 @@
+import AddToCartBtn from "./AddToCartBtn";
+
 function Card(props) {
   const {
     productId,
@@ -13,14 +15,12 @@ function Card(props) {
       <div className=" h-[100px] bg-zinc-300 rounded-md w-full"></div>
       {/* description */}
       <div className=" flex justify-between my-2">
-        <p>{productTitle}</p>
-        <p>{productPrice}</p>
+        <p className=" font-bold">{productTitle}</p>
+        <p>${productPrice}</p>
       </div>
 
-      <div>{productDescription}</div>
-      <button className="py-2 bg-blue-400 text-white rounded-md my-2 hover:bg-blue-500">
-        Add to cart
-      </button>
+      <div className=" my-2">{productDescription}</div>
+      <AddToCartBtn />
     </div>
   );
 }
