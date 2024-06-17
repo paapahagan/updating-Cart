@@ -8,6 +8,8 @@ function Card(props) {
     productTitle,
     productImage,
     productPrice,
+    setCartCount,
+    setShowCart,
   } = props;
   return (
     <div className=" bg-white grid  p-2 rounded-md w-full min-w-[200px] max-w-[250] m-auto ">
@@ -20,7 +22,7 @@ function Card(props) {
       </div>
 
       <div className=" my-2">{productDescription}</div>
-      <AddToCartBtn />
+      <AddToCartBtn setCartCount={setCartCount} setShowCart={setShowCart} />
     </div>
   );
 }

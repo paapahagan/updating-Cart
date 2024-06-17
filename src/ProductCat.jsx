@@ -1,7 +1,7 @@
 import Card from "./Card";
 
 function ProductCat(props) {
-  const { showCart } = props;
+  const { setShowCart, setCartCount } = props;
   const products = [
     {
       id: 0,
@@ -41,7 +41,8 @@ function ProductCat(props) {
           productSku={product.productSku}
           productDescription={product.productDescription}
           productPrice={product.productPrice}
-          showCart={showCart}
+          setShowCart={setShowCart}
+          setCartCount={setCartCount}
         />
       ))}
     </div>
